@@ -1,0 +1,182 @@
+java.util.Collection (interface)
+ ├── List(interface)
+ │   ├── ArrayList
+ │   ├── LinkedList
+ │   ├── Vector
+ │   └── Stack
+ ├── Set(interface)
+ │   ├── HashSet
+ │   ├── LinkedHashSet
+ │   └── TreeSet
+ └── Queue(interface)
+     ├── PriorityQueue
+     └── LinkedList
+
+java.util.Map (interface)
+ ├── HashMap
+ ├── LinkedHashMap
+ ├── TreeMap
+ └── Hashtable
+
+
+
+
+
+
+Collection :
+Collection is an object , it able to manage a group of Objects as Single entity.
+
+To represent all Collection objects java has provided a set of predefined classes and interface called as "Collection Framework".
+
+java has provided all the classes and interfaces which are related to Collection Framework in the form of "java.util" package.
+
+Q) To represent a group of elements we have already arrays then what is the requirement to use  the Collections Framework ?
+------------------------------------
+Ans : 
+-----
+Student[] std=new Student[3];
+ std[0]=new Student();
+ std[1]=new Student();
+ std[2]=new Student();
+ std[3]=new Student();   --> java.lang.ArrayIndexOutOfBounds Exception
+ 1.Arrays are available in fixed in size nature, Arrays are able to allow the elements Up to its size,
+ if we provide any element over its size then jvm will raise an Exception like java.lang.ArrayIndexOutOfBoundException
+
+ Collections are existed in dynamically growable nature , even if we add any element over its size then jvm will not raise any Exception.
+
+ ArrayList al=new ArrayList(3);
+ al.add(new Student());
+ al.add(new Student());
+ al.add(new Student());
+ al.add(new Student()); -->No Exception.
+
+ 2. Arrays are able to allow only homogeneous elements.
+ if we add any element which is not in the array type then compiler will raise an error like "incompatible types".
+Ex:
+ Student[] std=new Student[3];
+ std[0]=new Student();
+ std[1]=new Employee(); --> Error : Incompatible Types.
+ std[2]=new Customer(); --> Error : Incompatible Types.
+
+ Collections are able to allow heterogeneous elements.
+ Ex:
+ ---
+ ArrayList al=new ArrayList(3);
+ al.add(new Student());
+ al.add(new Customer());
+ al.add(new Employee());
+
+3. In the case arrays, no predefined library is existed to get all the elements in sorting or in searching , to perform sorting and searching operations over array elements we have to write logic explicitly.
+
+Ex:
+String[] str={"AAA","BBB","EEE","CCC","DDD"};
+---Logic to perform sorting ---
+
+
+In case of collections predefined library is existed to perform sorting and searching operations.
+
+Ex :
+---
+TreeSet ts=new TreeSet();
+ts.add("AAA");
+ts.add("FFF");
+ts.add("BBB);
+ts.add("EEE");
+ts.add("CCC");
+ts.add("DDD");
+System.out.println(ts);
+op:["AAA","BBB","CCC","DDD","EEE","FFF"]
+
+4.Arrays are not flexible to use in java application .
+Collection are very much flexible to use in java applications.
+
+5. array are able to provide better performance in java application.
+Collection are not able to provide performance in java application.
+
+6. Array are Less Api Dependent.
+collections are more api dependent.
+
+7.Arrays are able to improve typed in java application.
+Collections are not able to improve typed in java application.
+
+
+
+Q) What is the main interfaces and classes in collection framework
+
+
+Q) What is the Difference between collection and map?
+Ans:
+-----
+Collection is able to store all the elements individually as single entity.
+Map is able to store all the elements in key value pair.
+
+Q) What are the difference between list and set ?
+Ans:
+---
+1. List is index based , it able to arrange all element as per indexing.
+Set is not index based , it able to arrange all element as per elements hashcode values.
+
+2. List is able to store duplicate elements.
+set is not allowing duplicate element
+
+3. List is able to follow Insertion order.
+Set is not following insertion order.
+
+4. List is able to store any no of null value.
+set is able to allow only one null element.
+
+Note : SortedSet, NavigableSet and TreeSet are not allowing even single null element.
+
+5. No element in list is following sorting order.
+
+In Set, TreeSet, SortedSet And NavigableSet is following sorting order.
+
+6. All The implementation of list are allowing heterogeneous element.
+In TreeSet,set NavigableSet and SortedSet are allowing only homogeneous elements.
+
+
+------------------------------------
+
+Collection :
+---------------
+--> It is introduced in java along with its jdk1.2 version.
+--> it able to represent a group of element as single .
+it is a root interface to all the collection implementations.
+
+Methods :
+---------
+1.public boolean add(Object obj)
+--->it will add the specified element to the collection.
+---> it will return true value when the element is added.
+---> it  will return false when the element is not added.
+
+
+2.public boolean addAll(Collection c)
+--->it will add all the elements of the specified collection to the present.
+--->it will return true value when it add atleast one element.
+--->it will return false value when it add no elements.
+
+3.public boolean remove(Object element)
+--->it will remove the specified element from the collection .
+--->it will return true value when the element is removed.
+--->it will return false value when the element is not removed or when the element is not present in the collection to remove.
+
+4.public boolean removeAll(Collection c)
+--->it will remove all the elements of the  specified  Collection from the present Collection.
+---> it will return true value when it remove atleast one element.
+--->it will return false value when no element is removed from Collection.
+
+5.public boolean contains(Object obj)
+--->it will check whether the specified element is present in the collection or not.
+--->it will return true value when the specified element is existed.
+--->it will return false value when the specified element is not existed.
+
+6.public boolean containsAll(Collection c)
+--->it will check wheather all the elements of the specified Collection are existed or not in present Collection.
+---> It will return true value when all the elements are existed.
+--->it will return false value when all the elements are not existed.
+
+7.public boolean retainAll(Collection c)
+--->it will remove all the elements from the present Collection object except the elements which are existed in the specified Collection.
+--->it will return true value when it remove atleast one element.
+--->it will return false value when no element is removed from Collection.
