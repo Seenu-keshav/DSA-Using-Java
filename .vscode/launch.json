@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "DSA USING JAVA_a4400b52"
+        },
+        {
+            "type": "java",
+            "name": "Ques3",
+            "request": "launch",
+            "mainClass": "Strings.Ques3",
+            "projectName": "DSA USING JAVA_a4400b52"
+        },
+        {
+            "type": "java",
+            "name": "Ques2",
+            "request": "launch",
+            "mainClass": "Strings.Ques2",
+            "projectName": "DSA USING JAVA_a4400b52"
+        },
+        {
+            "type": "java",
+            "name": "Ques1",
+            "request": "launch",
+            "mainClass": "Strings.Ques1",
+            "projectName": "DSA USING JAVA_a4400b52"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
